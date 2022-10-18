@@ -1,24 +1,15 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Navbar from "./Navbar";
 import Posts from "./Posts";
 
-const Main = () => {
-//   const Posts = () =>{
-//     const [allPosts, setAllPosts]= useState([])
-//     async function fetchPosts (){
-//         try { 
-//             const response = await fetch("https://strangers-things.herokuapp.com/api/2209-FTB-ET-WEB-FT/posts")
-//             const result = await response.json()
-//             const UserPosts = result.data.Posts
-//             console.log(UserPosts)
-//             setAllPosts(UserPosts)
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
-//         } catch (error){
-//             console.log(error)
-//         }
-//     }
-    
-// }
+
   return (
     <div id="main">
     <div id="navbar">
