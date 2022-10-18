@@ -1,15 +1,14 @@
 import React, {useState, useEffect} from "react";
-import Navbar from "./Navbar";
-import Posts from "./Posts";
+import {Navbar, Posts, Register} from "./";
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Switch,
+//   Redirect,
+// } from "react-router-dom";
 
-
+const Main =  () =>{
   return (
     <div id="main">
     <div id="navbar">
@@ -17,11 +16,12 @@ import {
     </div>
     
     <div id="container">
-      <Posts/>
+      {/* <Posts/> */}
+      <Register/>
       {/* your components here */}
     </div>
   </div>
   );
-};
 
+}
 export default Main;
