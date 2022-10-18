@@ -9,7 +9,8 @@ const Register = (props)=> {
         const registeredUser = await registerUser(username, password)
         //check for message or for error.message
         // console.log(username, password)
-        const token= registeredUser.token
+        const token = registeredUser.token
+        console.log (token)
         localStorage.removeItem('token')
         localStorage.setItem('token',token)
     }

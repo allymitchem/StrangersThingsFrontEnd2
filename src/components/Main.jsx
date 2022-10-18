@@ -11,15 +11,13 @@ import {Navbar, Posts, Register} from "./";
 const Main =  () =>{
   return (
     <div id="main">
-    <div id="navbar">
-      <div>Stranger's Things</div>
-    </div>
+      <Navbar/>
+      {/* <div>Stranger's Things</div> */}
     
-    <div id="container">
-      {/* <Posts/> */}
-      <Register/>
-      {/* your components here */}
-    </div>
+      <Posts/>
+      {/* <Register/> */}
+      
+    
   </div>
   );
 

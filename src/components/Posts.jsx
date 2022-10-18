@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Navbar } from "./"
 import { getPosts } from "../api-adapter";
+import './Posts.css'
 
 const Posts = (props) =>{
     const [posts, setAllPosts]= useState([])
@@ -10,9 +11,12 @@ const Posts = (props) =>{
         fetchPosts()
     },[])
     return (
-    <div>{`this is your post component`}
+    <div>{`Posts`}
     {posts.length ? posts.map((post)=> {
-        return <div> {post.title}</div>
+        return <div className="PostBox"> 
+                    <div>{post.title}</div>
+                    <div>{post.description}</div>
+                </div>
     }) : <div> Loading your posts</div>
     }</div>
     )}
