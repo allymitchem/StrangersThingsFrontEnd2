@@ -11,11 +11,16 @@ const Posts = (props) =>{
         fetchPosts()
     },[])
     return (
-    <div>{`Posts`}
+        <div>
+    {/* // <div>{`Posts`} */}
     {posts.length ? posts.map((post)=> {
         return <div className="PostBox"> 
-                    <div>{post.title}</div>
+                    <div className ="postTitle">{post.title}</div>
                     <div>{post.description}</div>
+                    <div><b>Price: </b>{post.price}</div>
+                    <div><b>Location: </b>{post.location}</div>
+                    <div><b>Seller: </b>{post.author.username}</div>
+                    <div><b>ID: </b>{post._id}</div>
                 </div>
     }) : <div> Loading your posts</div>
     }</div>

@@ -19,7 +19,8 @@ export async function registerUser(username, password){
             }
         })
     }
-    const response = await fetch(`${baseUrl}/users/register`)
+    const response = await fetch(`${baseUrl}/users/register`, options)
     const result = await response.json()
+    
     return result.data
 }

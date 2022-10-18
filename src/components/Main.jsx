@@ -15,7 +15,7 @@ const Main =  () =>{
       {/* <div>Stranger's Things</div> */}
     
       <Posts/>
-      {/* <Register/> */}
+      <Register/>
       
     
   </div>
