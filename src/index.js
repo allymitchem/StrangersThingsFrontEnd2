@@ -1,11 +1,15 @@
-import React, {useState} from 'react'
-import ReactDOM from "react-dom/client"
-import {Main} from './components'
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
+import {  Main } from "./components";
+import { BrowserRouter } from "react-router-dom";
 
+const container = document.getElementById("app");
+const root = ReactDOM.createRoot(container);
 
-const container = document.getElementById('app')
-const root = ReactDOM.createRoot(container)
-
-root.render(<Main />)
-//test 2 
+root.render(
+  <BrowserRouter>
+    <Main />
+  </BrowserRouter>
+);
+//test 2
 // test

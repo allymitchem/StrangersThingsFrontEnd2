@@ -1,26 +1,30 @@
 import React, {useState, useEffect} from "react";
-import {Navbar, Posts, Register} from "./";
+import {Posts, Register, Navbar} from "./";
 
 import {
-  BrowserRouter as Router,
   Route,
-  Switch,
+  Routes,
   Redirect,
 } from "react-router-dom";
 
 const Main =  () =>{
   return (
-    <Router>
     <div id="main">
-      <Navbar/>
+      <h2>hello</h2>
       {/* <div>Stranger's Things</div> */}
-    
-      {/* <Posts/>
-      <Register/> */}
+      <Navbar/>
+
+      <Routes>
+        <Route path="register" element={< Register/>} />
+        <Route path="posts" element={< Posts/>} />
+        <Route path="/" element={< Posts/>} />
+
+      </Routes>
+
+      <Posts/>
       
     
   </div>
-  </Router>
   );
 
 }

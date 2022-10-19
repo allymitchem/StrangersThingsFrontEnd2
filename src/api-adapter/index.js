@@ -42,7 +42,7 @@ export async function logInUser(username, password){
         }
         )
     }
-    const response = await fetch(`${baseUrl}/users/login`, options)
+    const response = await fetch(`${baseUrl}/users/login`, options) //// got rid of /users/
     const result = await response.json()
 
     return result.data

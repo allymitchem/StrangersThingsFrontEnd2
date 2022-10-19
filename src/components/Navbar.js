@@ -5,28 +5,21 @@ import { logInUser } from '../api-adapter'
 
 
 const Navbar = () =>{
-    const [login, setLogIn]= useState([])
-    useEffect(()=>{
-        setLogIn(logInUser)
-    }, [])
+    // const [login, setLogIn]= useState([])
+    // useEffect(()=>{
+    //     setLogIn(logInUser)
+    // }, [])
     return (
         <header>
             <h1 >Stranger's Things</h1>
-            <form
-            className= "user"
-            //</header>onSubmit={handleSubmit}
-            >
 
-            <button className="Home">Home</button>
-            <button className="Posts">Posts</button>
-            <NavLink className= "login" to={logInUser} >Login</NavLink>
-            {/* <button className="Login" >Login</button/users/login>  */}
-            {/*Nav bar option buttons*/}
+            <NavLink className= "login" to='login' >Login</NavLink>
+            <NavLink className= "posts" to='posts' >Post</NavLink>
+            <NavLink className= "register" to='register' >Register</NavLink>
 
-
-            </form>
 
         </header>
+        // ,console.log('logInUser')
     )
 }
 
