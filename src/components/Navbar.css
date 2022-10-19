@@ -1,7 +1,25 @@
 
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: black;
     color: red;
     
+}
+.Home{
+    background-color: black;
+    color: red;
+    width: 60px; height: 30px
+}
+.Posts{
+    background-color: black;
+    color: red;
+    width: 60px; height: 30px
+}
+.Login{
+    background-color: black;
+    color: red;
+    width: 60px; height: 30px
 }
