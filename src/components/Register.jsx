@@ -21,7 +21,7 @@ const Register = (props)=> {
     
     return (
         <div className= 'box'> 
-        {`Register`}
+        {/* {`Register`} */}
         <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username: </label> 
             <input id='username' type='text' minLength="8" required/>
