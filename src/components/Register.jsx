@@ -13,7 +13,7 @@ const Register = (props)=> {
        
         //check for message or for error.message
         
-        const token = registeredUser.token
+        const token = registeredUser.token 
         console.log (token)
         localStorage.removeItem('token')
         localStorage.setItem('token',token)
@@ -24,7 +24,7 @@ const Register = (props)=> {
         {`Register`}
         <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username: </label> 
-            <input id='username' type='text' required/>
+            <input id='username' type='text' minLength="8" required/>
             <label htmlFor="password">Password: </label>
 			
             <input id="password" type= "password" minLength="8"/>

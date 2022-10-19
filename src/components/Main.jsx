@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 import {Navbar, Posts, Register} from "./";
 
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Switch,
-//   Redirect,
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 const Main =  () =>{
   return (
@@ -14,8 +14,8 @@ const Main =  () =>{
       <Navbar/>
       {/* <div>Stranger's Things</div> */}
     
-      <Posts/>
-      <Register/>
+      {/* <Posts/>
+      <Register/> */}
       
     
   </div>
