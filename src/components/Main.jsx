@@ -10,6 +10,7 @@ import {
 
 const Main =  () =>{
   return (
+    <Router>
     <div id="main">
       <Navbar/>
       {/* <div>Stranger's Things</div> */}
@@ -19,6 +20,7 @@ const Main =  () =>{
       
     
   </div>
+  </Router>
   );
 
 }

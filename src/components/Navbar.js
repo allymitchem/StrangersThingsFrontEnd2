@@ -11,10 +11,16 @@ const Navbar = () =>{
     return (
         <header>
             <h1 >Stranger's Things</h1>
+            <form
+            className= "user"
+            onSubmit={handleSubmit}>
             <button className="Home">Home</button>
             <button className="Posts">Posts</button>
             <button className="Login" >Login</button> 
             {/*Nav bar option buttons*/}
+
+
+            </form>
 
         </header>
     )
