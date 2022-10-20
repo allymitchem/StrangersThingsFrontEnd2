@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Navbar } from "./"
-import { getPosts } from "../api-adapter";
+import { getPosts, createPosts } from "../api-adapter";
+import { CreatePosts } from "./";
 import './Posts.css'
 
 const Posts = (props) =>{
@@ -12,8 +13,10 @@ const Posts = (props) =>{
     },[])
     return (
         <div>
+            <CreatePosts/>
     {/* // <div>{`Posts`} */}
     {posts.length ? posts.map((post)=> {
+
         return <div className="PostBox" key ={post._id}> 
                     <div className ="postTitle" >{post.title}</div>
                     <div>{post.description}</div>

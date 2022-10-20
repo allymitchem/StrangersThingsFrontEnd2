@@ -47,3 +47,21 @@ export async function logInUser(username, password){
 
     return result.data
 }
+export async function createPosts(title, description, price, willDeliver){
+    const options ={
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        }, body: JSON.stringify({
+            post:{
+                title: title,
+                description: description,
+                price: price,
+                willDeliver: true}
+                
+            }
+        )}
+        const response = await fetch(`${baseUrl}/posts/create`, options) 
+        const result = await response.json()
+    }
