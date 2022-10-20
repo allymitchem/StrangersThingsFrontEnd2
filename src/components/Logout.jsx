@@ -1,10 +1,14 @@
-import React from "react";
-import { redirect, NavLink } from 'react-router-dom'
-
-const logOut =()=>{
-    localStorage.removeItem('token')
-    return 
-}
+// import React, {useState} from "react";
+// import { redirect, NavLink } from 'react-router-dom'
+// import {Login} from './'
+// import { logInUser } from '../api-adapter'
 
 
-export default Logout;
+// const Logout= () => {
+//     localStorage.removeItem('token')
+//     setIsLoggedIn(false)
+
+//  }
+
+
+// export default Logout;

@@ -5,19 +5,29 @@ import {
   Route,
   Routes,
   Redirect,
+  Link
 } from "react-router-dom";
 
 const Main =  () =>{
+  const [isLoggedIn, setIsLoggedIn]= useState('')
+  useEffect(()=>{
+   const token = localStorage.getItem('token')
+   if (token) {
+    setIsLoggedIn(true)
+   }
+
+  },[]) 
   return (
     <div id="main">
    
       {/* <div>Stranger's Things</div> */}
-      <Navbar/>
+      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
 
       <Routes>
         
         <Route path="register" element={< Register/>} />
-        <Route path="login" element ={<Login/>}/>
+        <Route path="login"  element ={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/> }/>
+        {/* <Route path="logout" element= {<Logout/>}/> */}
         <Route path="posts" element={< Posts/>} />
         <Route path="/" element={< Posts/>} />
 
