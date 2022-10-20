@@ -11,7 +11,7 @@ const Login = () => {
     }
     return (
         <div>
-    {`Login page`}
+    {/* {`Login page`} */}
     <div className= 'logInBox'> 
       
         <form onSubmit = {handleLogin}>
@@ -21,7 +21,7 @@ const Login = () => {
 			
             <input id="password" type= "password" />
            
-            <button type="submit"> Submit </button>
+            <button type="submit"> Log In </button>
             </form>
             </div>
     </div>

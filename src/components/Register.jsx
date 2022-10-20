@@ -29,7 +29,7 @@ const Register = (props)=> {
 			
             <input id="password" type= "password" minLength="8"/>
            
-            <button type="submit"> Submit </button>
+            <button type="submit"> Register </button>
             </form>
             </div>
     )

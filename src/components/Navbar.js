@@ -11,12 +11,13 @@ const Navbar = () =>{
     // }, [])
     return (
         <header>
-            <h1 >Stranger's Things</h1>
-
-            <NavLink className= "login" to='login' >Login</NavLink>
-            <NavLink className= "posts" to='posts' >Post</NavLink>
-            <NavLink className= "register" to='register' >Register</NavLink>
-
+            <h1 className="Title" >Stranger's Things</h1>
+            <span className="headerButtons">
+            <NavLink className ="Home"  to= 'posts'>Home</NavLink>
+            <NavLink className= "Login" to='login' >Login</NavLink>
+            <NavLink className= "Posts" to='posts' >Posts</NavLink>
+            <NavLink className= "Register" to='register' >Sign Up</NavLink>
+        </span>
 
         </header>
         // ,console.log('logInUser')
