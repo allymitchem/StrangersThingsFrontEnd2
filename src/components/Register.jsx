@@ -23,13 +23,13 @@ const Register = (props)=> {
         <div className= 'box'> 
         {/* {`Register`} */}
         <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username: </label> 
+            <label htmlFor="username">Username: </label>  
             <input id='username' type='text' minLength="8" required/>
             <label htmlFor="password">Password: </label>
 			
             <input id="password" type= "password" minLength="8"/>
            
-            <button type="submit"> Register </button>
+            <button type="submit"> Submit </button>
             </form>
             </div>
     )
