@@ -74,5 +74,5 @@ export async function addPosts(token, title, description, price, userLocation, w
   };
   const response = await fetch(`${baseUrl}/posts`, options);
   const result = await response.json();
-
+  return result.data
 }
