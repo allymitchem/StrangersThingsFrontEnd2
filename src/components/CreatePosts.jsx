@@ -6,7 +6,7 @@ const CreatePosts=()=>{
     return( 
         <div>
         <form onSubmit = {handleSubmit}>
-        <h1 style={{color: "red", fontSize: "50px", fontFamily:'ITC Benguiat'}}>Log In</h1>
+        <h4 style={{color: "red", fontSize: "50px", fontFamily:'ITC Benguiat'}}>Add a post</h4>
         <label htmlFor="title">Title: </label><br></br>
         <input id='title' type='text'  required/><br></br>
         <label htmlFor="description">Description: </label><br></br>
