@@ -7,9 +7,11 @@ import {
   Redirect,
   Link
 } from "react-router-dom";
+import { getPosts } from "../api-adapter";
 
 const Main =  () =>{
   const [isLoggedIn, setIsLoggedIn]= useState('')
+  const [posts, setAllPosts]=useState([])
   // const [isToken, setIsToken] =useState (null)
   useEffect(()=>{
    const token = localStorage.getItem('token')
@@ -19,9 +21,20 @@ const Main =  () =>{
    }
 
   },[]) 
+
+  useEffect(()=>{
+    async function fetchPosts() {
+      const allPosts = await getPosts(localStorage.getItem('token'))
+      setAllPosts(allPosts)
+    }
+    fetchPosts()
+  }, [])
   function filterPosts(postId){
+    
     return posts.filter((post)=>{
-      return post._id==postId
+     
+      
+      return post._id == postId
     })
   }
   return (
@@ -36,7 +49,7 @@ const Main =  () =>{
         <Route path="login"  element ={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/> }/>
         {/* <Route path="logout" element= {<Logout/>}/> */}
         <Route path="posts" element={< Posts />} />
-        <Route path=":id" element={<PostDetails filterPosts={filterPosts}/>}/>
+        <Route path="posts/:id" element={<PostDetails filterPosts={filterPosts}/>}/>
         <Route path="post" element={<CreatePosts/>}/>
         <Route path="/" element={< Posts/>} />
         

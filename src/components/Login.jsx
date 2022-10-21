@@ -12,13 +12,13 @@ const Login = ({isLoggedIn, setIsLoggedIn})=> {
         const password = event.target[1].value
         const registeredUser = await logInUser(username, password)
         setIsLoggedIn(true)
-        console.log('user logged in')
+        // console.log('user logged in')
         // console.log(registeredUser)
        
         //check for message or for error.message
         
         const token = registeredUser.token 
-        console.log (token)
+        // console.log (token)
           localStorage.removeItem('token')
          localStorage.setItem('token',token)
 

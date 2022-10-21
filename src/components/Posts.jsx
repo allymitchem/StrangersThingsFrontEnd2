@@ -21,12 +21,13 @@ const Posts = (props) => {
       {posts.length ? (
         posts.map((post) => {
           return (
-            <div className="PostBox" key={post._id}>
+            <div className="PostBox" key={`post-id-${post._id}`} >
               <div className="postTitle">{post.title}</div>
               <div>{post.description}</div>
               <div>
                 <b>Price: </b>
                 {post.price}
+                
               </div>
               <div>
                 <b>Location: </b>
@@ -55,6 +56,7 @@ const Posts = (props) => {
     </div>
   );
 };
+
 
 //     async function fetchPosts (){
 //         try {
