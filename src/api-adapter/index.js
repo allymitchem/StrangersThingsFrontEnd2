@@ -1,7 +1,13 @@
 const baseUrl = "https://strangers-things.herokuapp.com/api/2209-FTB-ET-WEB-FT";
 
-export async function getPosts() {
-  const response = await fetch(`${baseUrl}/posts`);
+export async function getPosts(token) {
+    const options = {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        }
+    }
+  const response = await fetch(`${baseUrl}/posts`, options);
   const result = await response.json();
   const posts = result.data.posts;
   return posts;
@@ -44,9 +50,9 @@ export async function logInUser(username, password) {
 
   return result.data;
 }
-export async function addPosts(event) {
-    event.preventDefault()
-
+export async function addPosts(token, title, description, price, userLocation, willDeliver) { //took out even from () title, description, price, location, willDeliver
+    // event.preventDefault()
+// console.log(token, event.target)
   const options = {
     method: "POST",
     headers: {
@@ -55,11 +61,14 @@ export async function addPosts(event) {
     },
     body: JSON.stringify({
       post: {
-        title: event.target[0].value,
-        description: event.target[1].value,
-        price: event.target[2].value,
-        location: event.target[3].value,
-        willDeliver: event.target[4].checked
+        
+        title,
+        description,
+        price,
+        userLocation,
+        willDeliver
+
+
       },
     }),
   };
