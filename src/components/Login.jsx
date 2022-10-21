@@ -59,9 +59,5 @@ const Login = ({isLoggedIn, setIsLoggedIn})=> {
      </>
     
     ) }
-    
-
-
-
 
 export default Login
