@@ -25,7 +25,9 @@ const Navbar = ({isLoggedIn, setIsLoggedIn}) =>{
             {!isLoggedIn ? (
             <NavLink className= "Register" to='register' >Sign Up</NavLink>)
             : null}
-            <NavLink className ="CreatePosts" to='post'>Add New Listing</NavLink>
+            {isLoggedIn ? (
+            <NavLink className ="CreatePosts" to='post'>Add New Listing</NavLink> )
+            :(null)}
             
             
         </span>
