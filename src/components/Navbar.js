@@ -15,7 +15,7 @@ const Navbar = ({isLoggedIn, setIsLoggedIn}) =>{
             <h1 className="Title" >Stranger's Things</h1>
             <span className="headerButtons">
             <NavLink className ="Home"  to= 'posts'>Home</NavLink>
-            <NavLink className= "Posts" to='posts' >Posts</NavLink>
+            {/* <NavLink className= "Posts" to='posts' >Posts</NavLink> */}
             {isLoggedIn ? ( 
             <NavLink className= "Logout" onClick={()=>{localStorage.removeItem('token') 
             setIsLoggedIn(false)}}>Logout</NavLink> )

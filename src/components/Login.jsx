@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { redirect, NavLink } from 'react-router-dom'
+import { redirect, NavLink, useNavigate, Navigate  } from 'react-router-dom'
 import Register from './Register'
 import { logInUser } from '../api-adapter'
  
@@ -8,10 +8,16 @@ const Login = ({isLoggedIn, setIsLoggedIn})=> {
     async function handleSubmit(event){
     // RegisterUser()
         event.preventDefault()
+      
+        
+    
         const username= event.target[0].value
         const password = event.target[1].value
         const registeredUser = await logInUser(username, password)
+    
         setIsLoggedIn(true)
+     
+
         // console.log('user logged in')
         // console.log(registeredUser)
        
@@ -33,6 +39,7 @@ const Login = ({isLoggedIn, setIsLoggedIn})=> {
 
     return (
         <>
+        
     {/* {`Login page`} */}
     <div className= 'logInBox'> 
     {/* {!isLoggedIn ? ( */}
