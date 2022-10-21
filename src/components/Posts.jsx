@@ -1,36 +1,61 @@
-import React, {useState, useEffect} from "react";
-import { Navbar } from "./"
-import { getPosts, createPosts } from "../api-adapter";
+import React, { useState, useEffect } from "react";
+import { Navbar } from "./";
+import { getPosts, addPosts } from "../api-adapter";
 import { CreatePosts } from "./";
-import './Posts.css'
+import "./Posts.css";
 
-const Posts = (props) =>{
-    const [posts, setAllPosts]= useState([])
-    useEffect(()=>{
-        async function fetchPosts(){const allPosts= await getPosts()
-        setAllPosts(allPosts)} 
-        fetchPosts()
-    },[])
-    return (
-        <div>
-            <CreatePosts/>
-    {/* // <div>{`Posts`} */}
-    {posts.length ? posts.map((post)=> {
+const Posts = (props) => {
+  const [posts, setAllPosts] = useState([]);
+  useEffect(() => {
+    async function fetchPosts() {
+      const allPosts = await getPosts();
+      setAllPosts(allPosts);
+    }
+    fetchPosts();
+  }, []);
+  return (
+    <div>
+      {/* <CreatePosts /> */}
+      {/* // <div>{`Posts`} */}
+      {posts.length ? (
+        posts.map((post) => {
+          return (
+            <div className="PostBox" key={post._id}>
+              <div className="postTitle">{post.title}</div>
+              <div>{post.description}</div>
+              <div>
+                <b>Price: </b>
+                {post.price}
+              </div>
+              <div>
+                <b>Location: </b>
+                {post.location}
+              </div>
+              <div>
+                {post.willDeliver ? (
+                  <b>Will Deliver</b>
+                ) : (
+                  <b>Will Not Deliver</b>
+                )}
+              </div>
+              <div>
+                <b>Seller: </b>
+                {post.author.username}
+              </div>
 
-        return <div className="PostBox" key ={post._id}> 
-                    <div className ="postTitle" >{post.title}</div>
-                    <div>{post.description}</div>
-                    <div><b>Price: </b>{post.price}</div>
-                    <div><b>Location: </b>{post.location}</div>
-                    <div><b>Seller: </b>{post.author.username}</div>
-                    {/* <div><b>ID: </b>{post._id}</div> */}
-                </div>
-    }) : <div> Loading your posts</div>
-    }</div>
-    )}
-    
+              {/* <div><b>ID: </b>{post._id}</div> */}
+            </div>
+          );
+        })
+      ) : (
+        <div> Loading your posts</div>
+      )}
+    </div>
+  );
+};
+
 //     async function fetchPosts (){
-//         try { 
+//         try {
 //             const response = await fetch("https://strangers-things.herokuapp.com/api/2209-FTB-ET-WEB-FT/posts")
 //             const result = await response.json()
 //             // console.log(result)
@@ -40,7 +65,7 @@ const Posts = (props) =>{
 //             console.log(error)
 //         }
 //     }
-    
+
 // }
 
-export default Posts
+export default Posts;

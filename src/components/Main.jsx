@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Posts, Register, Navbar, Login} from "./";
+import {Posts, Register, Navbar, Login, CreatePosts} from "./";
 
 import {
   Route,
@@ -10,8 +10,10 @@ import {
 
 const Main =  () =>{
   const [isLoggedIn, setIsLoggedIn]= useState('')
+  // const [isToken, setIsToken] =useState (null)
   useEffect(()=>{
    const token = localStorage.getItem('token')
+  //  setIsToken(token)
    if (token) {
     setIsLoggedIn(true)
    }
@@ -28,7 +30,8 @@ const Main =  () =>{
         <Route path="register" element={< Register/>} />
         <Route path="login"  element ={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/> }/>
         {/* <Route path="logout" element= {<Logout/>}/> */}
-        <Route path="posts" element={< Posts/>} />
+        <Route path="posts" element={< Posts />} />
+        <Route path="post" element={<CreatePosts/>}/>
         <Route path="/" element={< Posts/>} />
 
       </Routes>
