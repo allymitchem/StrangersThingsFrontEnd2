@@ -47,7 +47,7 @@ export async function logInUser(username, password){
 
     return result.data
 }
-export async function createPosts(title, description, price, willDeliver){
+export async function addPosts(title, description, price, willDeliver){
     const options ={
         method: 'POST',
         headers: {

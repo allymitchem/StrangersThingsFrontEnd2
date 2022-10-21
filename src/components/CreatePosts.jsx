@@ -1,11 +1,12 @@
 import React from "react";
+import { addPosts } from "../api-adapter";
 
 
-function handleSubmit(event){}
+// function handleSubmit(event){}
 const CreatePosts=()=>{
     return( 
         <div>
-        <form onSubmit = {handleSubmit}>
+        <form onSubmit = {addPosts}>
         <h4 style={{color: "red", fontSize: "50px", fontFamily:'ITC Benguiat'}}>Add a post</h4>
         <label htmlFor="title">Title: </label><br></br>
         <input id='title' type='text'  required/><br></br>
