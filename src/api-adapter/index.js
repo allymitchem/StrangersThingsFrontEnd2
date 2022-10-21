@@ -76,3 +76,31 @@ export async function addPosts(token, title, description, price, userLocation, w
   const result = await response.json();
   return result.data
 }
+
+export async function updatePosts(post, id, token){
+  const options={
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    }, body: JSON.stringify({
+      post
+    })
+  }
+  const response = await fetch (`${baseUrl}/posts/${id}`, options)
+  const result = await response.json()
+  return result
+}
+
+export async function deletePost(id, token){
+  const options={
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    }
+  }
+  const response = await fetch (`${baseUrl}/posts/${id}`, options)
+  const result = await response.json()
+  return result
+}

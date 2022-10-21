@@ -3,6 +3,7 @@ import { Navbar } from "./";
 import { getPosts, addPosts } from "../api-adapter";
 import { CreatePosts } from "./";
 import "./Posts.css";
+import { Link, NavLink} from "react-router-dom";
 
 const Posts = (props) => {
   const [posts, setAllPosts] = useState([]);
@@ -42,6 +43,7 @@ const Posts = (props) => {
                 <b>Seller: </b>
                 {post.author.username}
               </div>
+              <Link to = {`/posts/${post._id}`}><button>Post Details</button></Link>
 
               {/* <div><b>ID: </b>{post._id}</div> */}
             </div>

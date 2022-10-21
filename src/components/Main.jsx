@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Posts, Register, Navbar, Login, CreatePosts} from "./";
+import {Posts, Register, Navbar, Login, CreatePosts, PostDetails} from "./";
 
 import {
   Route,
@@ -19,6 +19,11 @@ const Main =  () =>{
    }
 
   },[]) 
+  function filterPosts(postId){
+    return posts.filter((post)=>{
+      return post._id==postId
+    })
+  }
   return (
     <div id="main">
    
@@ -31,8 +36,10 @@ const Main =  () =>{
         <Route path="login"  element ={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/> }/>
         {/* <Route path="logout" element= {<Logout/>}/> */}
         <Route path="posts" element={< Posts />} />
+        <Route path=":id" element={<PostDetails filterPosts={filterPosts}/>}/>
         <Route path="post" element={<CreatePosts/>}/>
         <Route path="/" element={< Posts/>} />
+        
 
       </Routes>
 
