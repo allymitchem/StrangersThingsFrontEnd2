@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Posts, Register, Navbar, Login, CreatePosts, PostDetails} from "./";
+import {Posts, Register, Navbar, Login, CreatePosts, PostDetails, MessageForm} from "./";
 
 import {
   Route,
@@ -50,6 +50,7 @@ const Main =  () =>{
         {/* <Route path="logout" element= {<Logout/>}/> */}
         <Route path="posts" element={< Posts />} />
         <Route path="posts/:id" element={<PostDetails filterPosts={filterPosts}/>}/>
+        {/* <Route path="posts/:id/messages" element ={<MessageForm/>}/> */}
         <Route path="post" element={<CreatePosts/>}/>
         <Route path="/" element={< Posts/>} />
         

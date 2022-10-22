@@ -50,9 +50,7 @@ export async function logInUser(username, password) {
 
   return result.data;
 }
-export async function addPosts(token, title, description, price, userLocation, willDeliver) { //took out even from () title, description, price, location, willDeliver
-    // event.preventDefault()
-// console.log(token, event.target)
+export async function addPosts(token, title, description, price, userLocation, willDeliver) {
   const options = {
     method: "POST",
     headers: {
@@ -103,4 +101,23 @@ export async function deletePost(id, token){
   const response = await fetch (`${baseUrl}/posts/${id}`, options)
   const result = await response.json()
   return result
+}
+
+export async function sendMessage(token, id, content ) {
+  const options ={
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify({
+      message: {
+        content
+      }
+    })
+  }
+  const response = await fetch (`${baseUrl}/posts/${id}/messages`, options)
+  const result = response.json()
+  console.log(result)
+  
 }

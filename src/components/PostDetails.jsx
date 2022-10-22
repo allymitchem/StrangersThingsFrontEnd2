@@ -7,7 +7,7 @@ import { updatePosts, deletePost } from "../api-adapter";
 const PostDetails = (props) => {
   const { id } = useParams()
   const post = props.filterPosts(id)[0]
-  console.log(post)
+//   console.log(post)
     const [formDetails, setFormDetails] = useState({
         title: '',
         description: '',
@@ -40,7 +40,7 @@ const PostDetails = (props) => {
     }
     async function handleSubmit(event){
     event.preventDefault()
-    console.log('i work')
+    
     const updatedPost= await updatePosts(formDetails, post._id, localStorage.getItem('token') )
 
     console.log (updatedPost)
