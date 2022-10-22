@@ -12,6 +12,18 @@ import { getPosts } from "../api-adapter";
 const Main =  () =>{
   const [isLoggedIn, setIsLoggedIn]= useState('')
   const [posts, setAllPosts]=useState([])
+  // const search=()=>{
+  //   return (
+  //     <div>
+  //       <SearchBar/>
+  //       <ul>
+  //         {posts.map((post)=>(
+  //           <li key={post.id}>{post.name}</li>
+  //         ))}
+  //       </ul>
+  //     </div>
+  //   )
+  // }
   
   // const [isToken, setIsToken] =useState (null)
   useEffect(()=>{
@@ -54,7 +66,6 @@ const Main =  () =>{
         <Route path="posts/:id" element={<PostDetails filterPosts={filterPosts}/>}/>
         <Route path="post" element={<CreatePosts/>}/>
         <Route path="/" element={< Posts/>} />
-        
 
       </Routes>
 

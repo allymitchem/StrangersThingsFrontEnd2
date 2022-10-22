@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar } from "./";
 import { getPosts, addPosts } from "../api-adapter";
-import { CreatePosts } from "./";
+import { CreatePosts, PostSearch } from "./";
 import "./Posts.css";
 import { Link, NavLink} from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Posts = (props) => {
       setAllPosts(allPosts);
     }
     fetchPosts();
-  }, []);
+  }, []);  
   return (
     <div>
     
@@ -44,7 +44,7 @@ const Posts = (props) => {
                 <b>Seller: </b>
                 {post.author.username}
               </div>
-              <Link to = {`/posts/${post._id}`}><button>Post Details</button></Link>
+              <Link to = {`/posts/${post._id}`}><button style={{cursor: "pointer"}}>Post Details</button></Link>
 
               {/* <div><b>ID: </b>{post._id}</div> */}
             </div>

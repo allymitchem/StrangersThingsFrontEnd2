@@ -24,10 +24,10 @@ async function handleSubmit(event) {
 }
 
   return (
-    <div>
+    <div style={{textAlign: "center"}}>
       <form onSubmit={handleSubmit}>
         <h4
-          style={{ color: "red", fontSize: "35px", fontFamily: "ITC Benguiat" }}
+          style={{ color: "red", fontSize: "35px", fontFamily: "ITC Benguiat"}}
         >
           Add New Listing
         </h4>
@@ -72,7 +72,7 @@ setWillDeliver(event.target.checked)
 console.log(willDeliver)
 }} />
         <br></br>
-        <input type="submit" value="Create New Post" />
+        <input style={{cursor: "pointer"}}type="submit" value="Create New Post" />
       </form>
     </div>
   );

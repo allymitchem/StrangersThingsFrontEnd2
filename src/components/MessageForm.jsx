@@ -20,19 +20,21 @@ const MessageForm = () => {
     }}
 
     return (
-      <form onSubmit={handleMessage}>
-        <label htmlFor="message">
-          <b>Reply to seller: </b>
-        </label>
-        <input
+      <div>
+        <form onSubmit={handleMessage}>
+          <label htmlFor="message">
+            <h4>Reply to seller: </h4>
+          </label>
+          <input
           type="text"
           value={message}
           onChange={(event) => {
             setMessage(event.target.value);
           }}
         />
-        <input type="submit" value="Send" />
-      </form>
+          <input type="submit" value="Send" style={{cursor: "pointer"}} /><br></br>
+        </form>
+      </div>
     );
   }
 

@@ -50,7 +50,6 @@ const PostDetails = (props) => {
 }
 
     return (
-        // <h2>I am working</h2>
         <>
         { post ? ( <>
         <div className='box'>
@@ -79,6 +78,7 @@ const PostDetails = (props) => {
                 <div>
                     <form onChange={handleChange}
                     onSubmit={handleSubmit}>
+                        <h4>Edit</h4>
                         <input id="title"defaultValue={formDetails.title}/>
                         <input id="description"defaultValue={formDetails.description}/>
                         <input id="price"defaultValue={formDetails.price}/>

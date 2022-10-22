@@ -41,17 +41,24 @@ const Login = ({isLoggedIn, setIsLoggedIn})=> {
         <>
         
     {/* {`Login page`} */}
-    <div className= 'logInBox'> 
+    <div className= 'logInBox'
+    style={{
+        color: "red", 
+        fontFamily:'ITC Benguiat',
+        textAlign: "center"}}> 
     {/* {!isLoggedIn ? ( */}
         {/* <> */}
       {/* need to center log in boxes */}
         <form onSubmit = {handleSubmit}>
-            <h1 style={{color: "red", fontSize: "50px", fontFamily:'ITC Benguiat'}}>Log In</h1>
-            <label htmlFor="username">Username: </label><br></br>
+            <h1
+            style={{
+                fontSize: "50px"
+            }}>Log In</h1>
+            <label htmlFor="username" style={{fontSize: "25px"}}>Username: </label><br></br>
             <input id='username' type='text'  required/><br></br>
-            <label htmlFor="password">Password: </label><br></br>
+            <label htmlFor="password" style={{fontSize: "25px"}}>Password: </label><br></br>
             <input id="password" type= "password" /><br></br>
-            <button type="submit"> Log In </button><br></br>
+            <button type="submit" style={{cursor: "pointer"}}> Log In </button><br></br>
            
             <NavLink to= "/register">Don't have an account? Sign Up</NavLink>
             </form>

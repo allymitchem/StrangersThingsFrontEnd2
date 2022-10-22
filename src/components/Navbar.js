@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import './Navbar.css'
 import { logInUser } from '../api-adapter'
 import {Login} from './'
+import {PostSearch} from './'
 
 
 const Navbar = ({isLoggedIn, setIsLoggedIn}) =>{

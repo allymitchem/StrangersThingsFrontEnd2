@@ -20,19 +20,29 @@ const Register = (props)=> {
     }
     
     return (
-        <div className= 'box'> 
+        <div className= "box"
+        style={{
+            textAlign: 'center',
+            color: "red",
+            fontSize: "20px",
+            fontFamily: "ITC Benguiat",
+        }}> 
         {/* {`Register`} */}
         <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username: </label>  
-            <input id='username' type='text' minLength="8" required/>
-            <label htmlFor="password">Password: </label>
+            <h2>Complete your profile by filling in this account information</h2><hr></hr>
+            <label htmlFor="username">Username: </label><br></br>
+            <input id='username' type='text' minLength="8" required/><br></br>
+            <label htmlFor="password">Password: </label><br></br>
 			
-            <input id="password" type= "password" minLength="8"/>
+            <input id="password" type= "password" minLength="8"/><br></br>
            
-            <button type="submit"> Submit </button>
+            <button type="submit" style={{cursor: "pointer"}}> Submit </button>
             </form>
             </div>
     )
 }
+
+{/* <h1 style={{color: "red", fontSize: "50px", fontFamily:'ITC Benguiat'}}>Log In</h1> */}
+
 
 export default Register;
