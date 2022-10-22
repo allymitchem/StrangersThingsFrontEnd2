@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from "react";
-
+import './PostSearch.css'
 function PostSearch(props){
 
     const [value, setValue]=useState('');
@@ -28,13 +28,16 @@ function PostSearch(props){
     },[value])
 
     return(
-        <div>
-            <p className="titleText">Search Posts</p>
+        <div className="SearchBar">
+            <p className="titleText">Search Posts: </p>
+            <span className="Search">
             <input type="text"
             className="searchBar"
             onChange={(event)=>setValue(event.target.value)}
             value={value}
             />
+            <button type="submit">Submit</button>
+            </span>
             <div className="searchBack">
                 {result.map((result, index)=>(
                     <a href="#" key={index}>

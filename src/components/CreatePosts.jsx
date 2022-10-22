@@ -3,7 +3,7 @@ import { addPosts } from "../api-adapter";
 import { NavLink } from "react-router-dom";
 
 
-// function handleSubmit(event){}
+
 const CreatePosts = () => {
     const [title, setTitle]= useState('')
     const [description, setDescription]= useState('')
@@ -29,7 +29,7 @@ async function handleSubmit(event) {
         <h4
           style={{ color: "red", fontSize: "35px", fontFamily: "ITC Benguiat"}}
         >
-          Add New Listing
+          CREATE NEW POST
         </h4>
         <label htmlFor="title">Title: </label>
         <br></br>

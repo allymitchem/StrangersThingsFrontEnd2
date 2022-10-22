@@ -16,8 +16,7 @@ const Posts = (props) => {
   }, []);  
   return (
     <div>
-    
-   
+          <PostSearch/>
       {posts.length ? (
         posts.map((post) => {
           return (
