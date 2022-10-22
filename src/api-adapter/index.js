@@ -75,7 +75,7 @@ export async function addPosts(token, title, description, price, userLocation, w
   return result.data
 }
 
-export async function updatePosts(post, id, token){
+export async function updatePosts(post, _id, token){
   const options={
     method: 'PATCH',
     headers: {
@@ -85,7 +85,7 @@ export async function updatePosts(post, id, token){
       post
     })
   }
-  const response = await fetch (`${baseUrl}/posts/${id}`, options)
+  const response = await fetch (`${baseUrl}/posts/${post._id}`, options)
   const result = await response.json()
   return result
 }
@@ -103,7 +103,7 @@ export async function deletePost(id, token){
   return result
 }
 
-export async function sendMessage(token, id, content ) {
+export async function sendMessage(token, _id, content ) {
   const options ={
     method: "POST",
     headers: {
@@ -116,7 +116,7 @@ export async function sendMessage(token, id, content ) {
       }
     })
   }
-  const response = await fetch (`${baseUrl}/posts/${id}/messages`, options)
+  const response = await fetch (`${baseUrl}/posts/${post._id}/messages`, options)
   const result = response.json()
   console.log(result)
   

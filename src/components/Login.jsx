@@ -4,7 +4,7 @@ import Register from './Register'
 import { logInUser } from '../api-adapter'
  
 const Login = ({isLoggedIn, setIsLoggedIn})=> {
-        
+        const navigate = useNavigate()
     async function handleSubmit(event){
     // RegisterUser()
         event.preventDefault()
@@ -55,6 +55,14 @@ const Login = ({isLoggedIn, setIsLoggedIn})=> {
            
             <NavLink to= "/register">Don't have an account? Sign Up</NavLink>
             </form>
+
+            { isLoggedIn ?
+            (
+                navigate('/posts')
+
+            )
+        : (null)
+    }
             {/* </>  */}
     {/* ) : ( */}
         {/* <>

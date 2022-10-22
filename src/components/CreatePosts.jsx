@@ -15,7 +15,7 @@ async function handleSubmit(event) {
     try{
         const token = localStorage.getItem('token')
         const newPost = await addPosts(token, title, description, price, userLocation, willDeliver)
-        console.log(newPost)
+       
     }
     catch(error){
         console.log(error)

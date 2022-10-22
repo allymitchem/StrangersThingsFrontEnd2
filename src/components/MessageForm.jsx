@@ -1,35 +1,38 @@
-// import React, { useState } from "react";
-// import { sendMessage } from "../api-adapter";
+import React, { useState } from "react";
+import { sendMessage } from "../api-adapter";
 
-// const MessageForm = () => {
-//   const [message, setMessage] = useState("");
+const MessageForm = () => {
+  const [message, setMessage] = useState("");
+  
 
-//   async function handleSubmit(event) {
-//     event.preventDefault();
-//     try {
-//       const token = localStorage.getItem("token");
-//       const newMessage = await sendMessage(token, id, content);
-//       console.log(newMessage);
-//     } catch (error) {
-//       console.log(error);
-//     }
+  async function handleMessage(event) {
+    event.preventDefault();
+    try {
+      const token = localStorage.getItem("token");
+      const content = message
 
-//     return (
-//       <form onSubmit={handleSubmit}>
-//         <label htmlFor="message">
-//           Please enter your message to the seller here:{" "}
-//         </label>
-//         <input
-//           type="text"
-//           value={message}
-//           onChange={(event) => {
-//             setMessage(event.target.value);
-//           }}
-//         />
-//         <input type="submit" value="Send" />
-//       </form>
-//     );
-//   }
-// };
+      const newMessage = await sendMessage(token, content);
+      console.log(newMessage);
+    } catch (error) {
+      console.log(error);
+    }}
 
-// export default MessageForm;
+    return (
+      <form onSubmit={handleMessage}>
+        <label htmlFor="message">
+          <b>Reply to seller: </b>{" "}
+        </label>
+        <input
+          type="text"
+          value={message}
+          onChange={(event) => {
+            setMessage(event.target.value);
+          }}
+        />
+        <input type="submit" value="Send" />
+      </form>
+    );
+  }
+
+
+export default MessageForm;

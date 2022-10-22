@@ -1,7 +1,8 @@
-import react, { useEffect, useState} from "react";
+import React, { useEffect, useState} from "react";
 import { NavLink, useParams } from "react-router-dom";
-import { Posts } from ".";
+
 import { updatePosts, deletePost } from "../api-adapter";
+import MessageForm from "./MessageForm";
 
 
 const PostDetails = (props) => {
@@ -22,6 +23,7 @@ const PostDetails = (props) => {
                 description: post.description,
                 price: post.price,
                 location: post.location,
+                
             })
     },[])
     function handleChange(event){
@@ -71,9 +73,9 @@ const PostDetails = (props) => {
                 </div>
             
                 <NavLink to={"/posts"}>
-                    <button>Go Back</button>
+                    <button>Go Back</button> 
                 </NavLink>
-
+               <MessageForm/>
                 <div>
                     <form onChange={handleChange}
                     onSubmit={handleSubmit}>
@@ -96,6 +98,7 @@ const PostDetails = (props) => {
                     <button id={post._id ? `${post._id}` : null} onClick = {(event)=> {handleDelete(event)}}>Delete Post</button>
 
                 </div>
+              
         
         </div>
         </> 
