@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 const MessageForm = () => {
   const [message, setMessage] = useState("");
-  const id = useParams()
+  const {id} = useParams()
 
   async function handleMessage(event) {
     event.preventDefault();

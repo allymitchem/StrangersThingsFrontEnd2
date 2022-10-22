@@ -99,13 +99,12 @@ export async function deletePost(id, token){
     }
   }
   const response = await fetch (`${baseUrl}/posts/${id}`, options)
-  console.log(response)
-  console.log(id)
+  
   const result = await response.json()
   return result
 }
 
-export async function sendMessage(content, id, token ) {
+export async function sendMessage(token, id, content) {
  
   const options ={
     method: "POST",
@@ -120,10 +119,11 @@ export async function sendMessage(content, id, token ) {
     })
   }
   
-  const response = await fetch (`${baseUrl}/posts/${id}messages`,options)
+  const response = await fetch (`${baseUrl}/posts/${id}/messages`,options)
   console.log(response)
-  // console.log(id)
+  console.log(id)
   const result =  await response.json()
   console.log(result)
+  
   
 }

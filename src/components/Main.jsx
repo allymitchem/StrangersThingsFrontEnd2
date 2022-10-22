@@ -50,8 +50,8 @@ const Main =  () =>{
         <Route path="login"  element ={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/> }/>
         {/* <Route path="logout" element= {<Logout/>}/> */}
         <Route path="posts" element={< Posts />} />
-        <Route path="posts/:id" element={<PostDetails filterPosts={filterPosts}/>}/>
         <Route path="posts/:id/messages" element ={<MessageForm filterPosts={filterPosts}/>}/>
+        <Route path="posts/:id" element={<PostDetails filterPosts={filterPosts}/>}/>
         <Route path="post" element={<CreatePosts/>}/>
         <Route path="/" element={< Posts/>} />
         
