@@ -12,6 +12,7 @@ import { getPosts } from "../api-adapter";
 const Main =  () =>{
   const [isLoggedIn, setIsLoggedIn]= useState('')
   const [posts, setAllPosts]=useState([])
+  
   // const [isToken, setIsToken] =useState (null)
   useEffect(()=>{
    const token = localStorage.getItem('token')
@@ -50,7 +51,7 @@ const Main =  () =>{
         {/* <Route path="logout" element= {<Logout/>}/> */}
         <Route path="posts" element={< Posts />} />
         <Route path="posts/:id" element={<PostDetails filterPosts={filterPosts}/>}/>
-        {/* <Route path="posts/:id/messages" element ={<MessageForm/>}/> */}
+        <Route path="posts/:id/messages" element ={<MessageForm filterPosts={filterPosts}/>}/>
         <Route path="post" element={<CreatePosts/>}/>
         <Route path="/" element={< Posts/>} />
         

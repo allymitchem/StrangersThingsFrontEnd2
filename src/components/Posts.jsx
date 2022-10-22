@@ -16,8 +16,8 @@ const Posts = (props) => {
   }, []);
   return (
     <div>
-      {/* <CreatePosts /> */}
-      {/* // <div>{`Posts`} */}
+    
+   
       {posts.length ? (
         posts.map((post) => {
           return (
