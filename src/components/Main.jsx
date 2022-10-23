@@ -49,7 +49,7 @@ const Main =  () =>{
         
         <Route path="register" element={< Register/>} />
         <Route path="login"  element ={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/> }/>
-        <Route path="/users/me" element={<UserProfile setAllPosts={setAllPosts}/>}/>
+        <Route path="/users/me" element={<UserProfile posts={posts} setAllPosts={setAllPosts}/>}/>
         {/* <Route path="logout" element= {<Logout/>}/> */}
         <Route path="posts" element={< Posts />} />
         <Route path="posts/:id/messages" element ={<MessageForm filterPosts={filterPosts}/>}/>
