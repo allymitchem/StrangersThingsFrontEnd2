@@ -17,6 +17,8 @@ const PostDetails = (props) => {
         willDeliver: false
     })
     useEffect(()=>{
+    async function makeDetails() {
+
         setFormDetails(
             {
                 title: post.title,
@@ -24,7 +26,9 @@ const PostDetails = (props) => {
                 price: post.price,
                 location: post.location,
                 
-            })
+            }
+            )
+    } makeDetails()
     },[])
     function handleChange(event){
         event.preventDefault()

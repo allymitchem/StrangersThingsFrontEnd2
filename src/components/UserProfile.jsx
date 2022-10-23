@@ -16,14 +16,14 @@ const UserProfile = ({posts}) => {
         } getUserData()
     }, [token])
     const UserPosts=userInfo.posts
-    // const UserMessages = userInfo.messages
+    const UserMessages = userInfo.messages
     // const FromUserName = userInfo.username
     
 
     return (
         <div>
         <MyPosts  token ={token}  UserPosts ={UserPosts}/>
-        <MyMessages  token={token} />
+        <MyMessages  token={token}  UserMessages= {UserMessages}/>
         </div>
     )
 }

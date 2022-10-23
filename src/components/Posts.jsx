@@ -45,8 +45,7 @@ const Posts = (props) => {
 
             onChange={ (event) => {
              setSearchTerm(event.target.value)
-              console.log('im working')
-              console.log(event.target.value)
+              
             } 
           }
             />
