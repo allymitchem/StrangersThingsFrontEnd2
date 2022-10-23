@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
-import {Posts, Register, Navbar, Login, CreatePosts, PostDetails, MessageForm, MyMessages} from "./";
+import {Posts, Register, Navbar, Login, CreatePosts, PostDetails, MessageForm, UserProfile} from "./";
 
 import {
   Route,
   Routes,
+  
   Redirect,
   Link
 } from "react-router-dom";
@@ -12,23 +13,11 @@ import { getPosts } from "../api-adapter";
 const Main =  () =>{
   const [isLoggedIn, setIsLoggedIn]= useState('')
   const [posts, setAllPosts]=useState([])
-  // const search=()=>{
-  //   return (
-  //     <div>
-  //       <SearchBar/>
-  //       <ul>
-  //         {posts.map((post)=>(
-  //           <li key={post.id}>{post.name}</li>
-  //         ))}
-  //       </ul>
-  //     </div>
-  //   )
-  // }
   
-  // const [isToken, setIsToken] =useState (null)
+  
+  
   useEffect(()=>{
    const token = localStorage.getItem('token')
-  //  setIsToken(token)
    if (token) {
     setIsLoggedIn(true)
    }
@@ -60,7 +49,7 @@ const Main =  () =>{
         
         <Route path="register" element={< Register/>} />
         <Route path="login"  element ={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/> }/>
-        {/* <Route path="/users/me" element={<MyMessages/>}/> */}
+        <Route path="/users/me" element={<UserProfile setAllPosts={setAllPosts}/>}/>
         {/* <Route path="logout" element= {<Logout/>}/> */}
         <Route path="posts" element={< Posts />} />
         <Route path="posts/:id/messages" element ={<MessageForm filterPosts={filterPosts}/>}/>

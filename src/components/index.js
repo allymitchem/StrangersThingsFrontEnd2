@@ -7,7 +7,8 @@ export {default as CreatePosts} from './CreatePosts'
 export {default as PostDetails} from './PostDetails'
 export {default as MyMessages} from './MyMessages'
 export {default as MessageForm} from './MessageForm'
-export {default as PostSearch} from './PostSearch'
-export {default as Profile} from './Profile'
-// export {default as SinglePost} from './SinglePost'
+export {default as UserProfile} from './UserProfile'
+export {default as MyPosts} from './MyPosts'
+
+
 

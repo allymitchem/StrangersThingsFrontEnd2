@@ -39,6 +39,7 @@ const Posts = (props) => {
             <span className="Search">
              <input type="text"
             className="searchBar"
+            placeholder="Search..."
           
             value={searchTerm}
 

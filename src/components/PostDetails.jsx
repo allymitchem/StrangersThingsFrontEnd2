@@ -87,14 +87,7 @@ const PostDetails = (props) => {
                     </form>
 
 
-                    {
-                    /* {post.author.username== username ? (
-                    //     <button id={post._id ? `${post._id}` : null} onClick = {(event)=> {handleDelete(event)}}>Delete Post</button>
-                    // ): (
-                    //     null
-                    // )
-
-                    // } */}                        
+                                         
                     <button id={post._id ? `${post._id}` : null} onClick = {(event)=> {handleDelete(event)}}>Delete Post</button>
 
                 </div>

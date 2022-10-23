@@ -1,11 +1,10 @@
 import React from 'react'
 
-const MyMessages= () => {
-    return
-    (
-        <h2>Messages displayed here</h2>
+const MyMessages = () => {
+    return (
+        <h2>My Messages here</h2>
     )
-
+    
 }
 
 

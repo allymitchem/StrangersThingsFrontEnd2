@@ -4,7 +4,7 @@ export async function getPosts(token) {
   const options = {
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
+      'Authorization': `Bearer ${token}`,
     },
   };
   const response = await fetch(`${baseUrl}/posts`, options);
@@ -45,7 +45,7 @@ export async function logInUser(username, password) {
       },
     }),
   };
-  const response = await fetch(`${baseUrl}/users/login`, options); //// got rid of /users/
+  const response = await fetch(`${baseUrl}/users/login`, options); 
   const result = await response.json();
 
   return result.data;
@@ -62,7 +62,7 @@ export async function addPosts(
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
+      'Authorization': `Bearer ${token}`,
     },
     body: JSON.stringify({
       post: {
@@ -84,7 +84,7 @@ export async function updatePosts(post, id, token) {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
+      'Authorization': `Bearer ${token}`,
     },
     body: JSON.stringify({
       post,
@@ -100,7 +100,7 @@ export async function deletePost(id, token) {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
+      'Authorization': `Bearer ${token}`,
     },
   };
   const response = await fetch(`${baseUrl}/posts/${id}`, options);
@@ -114,7 +114,7 @@ export async function sendMessage(token, id, content) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
+      'Authorization': `Bearer ${token}`,
     },
     body: JSON.stringify({
       message: {
@@ -129,3 +129,19 @@ export async function sendMessage(token, id, content) {
   const result = await response.json();
   console.log(result);
 }
+
+export async function getUserProfile(token) {
+  
+  const options ={
+      headers : {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+      }
+  }
+  const response = await fetch (`${baseUrl}/users/me`, options)
+  
+  const result = await response.json()
+  console.log(result)
+  return result.data
+  
+} 
