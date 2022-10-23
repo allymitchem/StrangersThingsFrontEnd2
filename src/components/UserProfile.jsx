@@ -1,32 +1,29 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { getUserProfile } from "../api-adapter";
-import {MyPosts, MyMessages} from './'
+import { MyPosts, MyMessages } from "./";
+import "./UserProfile.css";
 
-const UserProfile = ({posts}) => {
- 
-    const [userInfo, setUserInfo] = useState ({posts:[], messages:[]})
-    const token = localStorage.getItem("token");
-    
-    useEffect (()=>{
-        
-        async function getUserData() {
-            const UserData = await getUserProfile(token)
-            
-            setUserInfo(UserData)
-        } getUserData()
-    }, [token])
-    const UserPosts=userInfo.posts
-    const UserMessages = userInfo.messages
-    // const FromUserName = userInfo.username
-    
+const UserProfile = ({ posts }) => {
+  const [userInfo, setUserInfo] = useState({ posts: [], messages: [] });
+  const token = localStorage.getItem("token");
 
-    return (
-        <div>
-        <MyPosts  token ={token}  UserPosts ={UserPosts}/>
-        <MyMessages  token={token}  UserMessages= {UserMessages}/>
-        </div>
-    )
-}
+  useEffect(() => {
+    async function getUserData() {
+      const UserData = await getUserProfile(token);
 
+      setUserInfo(UserData);
+    }
+    getUserData();
+  }, [token]);
+  const UserPosts = userInfo.posts;
+  const UserMessages = userInfo.messages;
 
-export default UserProfile
+  return (
+    <div className="UserDisplay">
+      <MyPosts token={token} UserPosts={UserPosts} />
+      <MyMessages UserMessages={UserMessages} />
+    </div>
+  );
+};
+
+export default UserProfile;

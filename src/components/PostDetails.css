@@ -1,0 +1,23 @@
+.EditForm {
+    display:flex;
+    flex-direction: column;
+    width: 400px;
+   
+    border-radius:10px;
+}
+
+.editTitle{
+    margin-bottom:2px;
+    display:flex;
+   margin-left: 148px;
+   font-family: 'ITC Benguiat';
+
+}
+
+.box {
+    margin:10px;
+}
+
+.deleteButton {
+    margin-top: 10px;
+}

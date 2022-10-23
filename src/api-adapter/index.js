@@ -141,7 +141,7 @@ export async function getUserProfile(token) {
   const response = await fetch (`${baseUrl}/users/me`, options)
   
   const result = await response.json()
-  console.log(result.data)
+  console.log(result)
   return result.data
   
   

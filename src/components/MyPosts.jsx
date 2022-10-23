@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const MyPosts = ({ token, UserPosts }) => {
   return (
   <div>
-    <h2>My Posts</h2>
+    <h2 className="title">My Posts</h2>
   {UserPosts.map((post) => {
     return (
       <div className="PostBox" key={`post-id-${post._id}`}>

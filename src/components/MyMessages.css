@@ -1,0 +1,15 @@
+
+.title {
+    margin:10px;
+    font-family: 'ITC Benguiat';
+    color: red;
+    display:flex;
+    justify-content: center;
+}
+
+.MessageDisplay {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}

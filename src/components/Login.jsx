@@ -1,31 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { redirect, NavLink, useNavigate, Navigate } from "react-router-dom";
-import Register from "./Register";
+
 import { logInUser } from "../api-adapter";
 
 const Login = ({ isLoggedIn, setIsLoggedIn }) => {
   const navigate = useNavigate();
   async function handleSubmit(event) {
-    // RegisterUser()
     event.preventDefault();
 
     const username = event.target[0].value;
     const password = event.target[1].value;
     const registeredUser = await logInUser(username, password);
 
-    setIsLoggedIn(true);
-
+    setIsLoggedIn(true)
     const token = registeredUser.token;
 
     localStorage.removeItem("token");
     localStorage.setItem("token", token);
   }
-//   const logOut= () => {
-//     localStorage.removeItem('token')
-//     setIsLoggedIn(false)
-//     console.log ('user logged out')
-
-//  }
 
   return (
     <>
@@ -65,8 +57,8 @@ const Login = ({ isLoggedIn, setIsLoggedIn }) => {
 
           <NavLink to="/register">Don't have an account? Sign Up</NavLink>
         </form>
-
         {isLoggedIn ? navigate("/users/me") : null}
+
       </div>
     </>
   );
