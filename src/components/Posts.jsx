@@ -22,7 +22,9 @@ const Posts = (props) => {
     
     return (
       post.title.toLowerCase().includes(text) || 
-      post.description.toLowerCase().includes(text)
+      post.description.toLowerCase().includes(text)||
+      post.location.toLowerCase().includes(text)||
+      post.author.username.toLowerCase().includes(text)
     )
 
   }
