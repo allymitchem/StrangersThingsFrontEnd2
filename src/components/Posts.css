@@ -10,3 +10,18 @@
     font-size: 18px;
     font-weight:bold;
 }
+.SearchBar {
+    margin:10px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    
+}
+
+.titleText {
+    font-weight:bold;
+    font-family: 'ITC Benguiat';
+    text-transform:uppercase;
+    margin-right:5px;
+    color:red;
+}

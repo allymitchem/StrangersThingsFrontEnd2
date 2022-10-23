@@ -53,7 +53,7 @@ const Login = ({isLoggedIn, setIsLoggedIn})=> {
             <h1
             style={{
                 fontSize: "50px"
-            }}>Log In</h1>
+            }}>LOG IN</h1>
             <label htmlFor="username" style={{fontSize: "25px"}}>Username: </label><br></br>
             <input id='username' type='text'  required/><br></br>
             <label htmlFor="password" style={{fontSize: "25px"}}>Password: </label><br></br>

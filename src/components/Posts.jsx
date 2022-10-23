@@ -7,6 +7,9 @@ import { Link, NavLink} from "react-router-dom";
 
 const Posts = (props) => {
   const [posts, setAllPosts] = useState([]);
+  const [searchTerm, setSearchTerm]= useState('');
+
+
   useEffect(() => {
     async function fetchPosts() {
       const allPosts = await getPosts();
@@ -14,11 +17,42 @@ const Posts = (props) => {
     }
     fetchPosts();
   }, []);  
+
+  function postMatches (post,text){
+    
+    return (
+      post.title.toLowerCase().includes(text) || 
+      post.description.toLowerCase().includes(text)
+    )
+
+  }
+  const filteredPosts= posts.filter(post => postMatches(post, searchTerm))
+  const postsToDisplay = searchTerm.length ? filteredPosts : posts;
+  
   return (
     <div>
-          <PostSearch/>
+         
+         <div className="SearchBar">
+             <p className="titleText">Search Posts: </p>
+            <span className="Search">
+             <input type="text"
+            className="searchBar"
+          
+            value={searchTerm}
+
+            onChange={ (event) => {
+             setSearchTerm(event.target.value)
+              console.log('im working')
+              console.log(event.target.value)
+            } 
+          }
+            />
+             </span>
+             </div>
+      
+        
       {posts.length ? (
-        posts.map((post) => {
+        postsToDisplay.map((post) => {
           return (
             <div className="PostBox" key={`post-id-${post._id}`} >
               <div className="postTitle">{post.title}</div>
@@ -43,9 +77,9 @@ const Posts = (props) => {
                 <b>Seller: </b>
                 {post.author.username}
               </div>
-              <Link to = {`/posts/${post._id}`}><button style={{cursor: "pointer"}}>Post Details</button></Link>
+              <Link to = {`/posts/${post._id}`}><button >Post Details</button></Link>
 
-              {/* <div><b>ID: </b>{post._id}</div> */}
+              
             </div>
           );
         })
@@ -57,18 +91,6 @@ const Posts = (props) => {
 };
 
 
-//     async function fetchPosts (){
-//         try {
-//             const response = await fetch("https://strangers-things.herokuapp.com/api/2209-FTB-ET-WEB-FT/posts")
-//             const result = await response.json()
-//             // console.log(result)
-//             const UserPosts = result.data.posts;
-//             // console.log(UserPosts)
-//         } catch (error){
-//             console.log(error)
-//         }
-//     }
 
-// }
 
 export default Posts;
