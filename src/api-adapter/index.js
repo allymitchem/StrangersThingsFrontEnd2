@@ -124,10 +124,9 @@ export async function sendMessage(token, id, content) {
   };
 
   const response = await fetch(`${baseUrl}/posts/${id}/messages`, options);
-  console.log(response);
-  console.log(id);
+  
   const result = await response.json();
-  console.log(result);
+  // console.log(result);
 }
 
 export async function getUserProfile(token) {

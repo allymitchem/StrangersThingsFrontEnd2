@@ -5,7 +5,7 @@ import { updatePosts, deletePost } from "../api-adapter";
 import MessageForm from "./MessageForm";
 import "./PostDetails.css";
 
-const PostDetails = (props) => {
+const PostDetails = (props,) => {
   const { id } = useParams();
   const post = props.filterPosts(id)[0];
 
@@ -76,6 +76,7 @@ const PostDetails = (props) => {
               <button>Go Back</button>
             </NavLink>
             {!post.isAuthor ? <MessageForm /> : null}
+           
             <div>
               {" "}
               {post.isAuthor ? (
