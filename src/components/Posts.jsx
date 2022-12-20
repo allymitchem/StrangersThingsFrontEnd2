@@ -44,7 +44,7 @@ const Posts = (props) => {
           />
         </span>
       </div>
-
+            <div class="postList">
       {posts.length ? (
         postsToDisplay.map((post) => {
           return (
@@ -79,6 +79,7 @@ const Posts = (props) => {
       ) : (
         <div> Loading your posts</div>
       )}
+      </div>
     </div>
   );
 };
