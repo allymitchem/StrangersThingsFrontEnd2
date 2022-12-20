@@ -3,24 +3,32 @@
   border-radius: 10px;
   padding: 5px;
   margin: 10px;
-  background-color:  rgba(10, 66, 73, 0.611);
-  width:75%;
- /* position:fixed */
+  background-color:  rgba(80, 118, 124, 0.611);
+  width:80%;
+
  
 }
+
+.postsPage{
+  max-height: 100vh;
+  overflow-y: scroll;
+}
 .postList {
+ 
   display: flex;
   flex-direction:column;
   justify-content: center;
   align-items: center;
- 
 }
+
 .postTitle {
   font-size: 18px;
   font-weight: bold;
 }
+
 .SearchBar {
   margin: 10px;
+  margin-left:10%;
   display: flex;
   flex-direction: row;
   align-items: center;

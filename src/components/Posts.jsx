@@ -29,7 +29,7 @@ const Posts = (props) => {
   const postsToDisplay = searchTerm.length ? filteredPosts : posts;
 
   return (
-    <div>
+    <div className="postsPage">
       <div className="SearchBar">
         <p className="titleText">Search Posts: </p>
         <span className="Search">
