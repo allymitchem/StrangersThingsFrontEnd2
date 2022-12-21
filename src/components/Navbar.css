@@ -15,14 +15,22 @@ header {
     font-family:'ITC Benguiat';
     text-transform: uppercase;
 }
-/* .headerButtons {
-    margin:10px;
-  
-    /* padding: 20px; */
-/* } */ 
 
-
-.Home{
+.Home, .Posts, .Login, .Register, .Logout, .CreatePosts, .Profile{
+    
+    color: red;
+    font-size:20px;
+    width: 60px; height: 30px;
+    margin-right:10px;
+    padding: 5px;
+    border: 1px solid rgb(243, 239, 239);
+    background-color: rgb(243, 239, 239);
+    border-radius: 5px;
+    text-decoration: none;
+    font-family:'ITC Benguiat';
+    text-transform: uppercase;
+}
+/* .Posts{
     
     color: red;
     width: 60px; height: 30px;
@@ -34,9 +42,8 @@ header {
     text-decoration: none;
     font-family:'ITC Benguiat';
     text-transform: uppercase;
-}
-.Posts{
-    
+} */
+/* .Login{
     color: red;
     width: 60px; height: 30px;
     margin-right:10px;
@@ -47,21 +54,9 @@ header {
     text-decoration: none;
     font-family:'ITC Benguiat';
     text-transform: uppercase;
-}
-.Login{
-    color: red;
-    width: 60px; height: 30px;
-    margin-right:10px;
-    padding: 5px;
-    border: 1px solid rgb(243, 239, 239);
-    background-color: rgb(243, 239, 239);
-    border-radius: 5px;
-    text-decoration: none;
-    font-family:'ITC Benguiat';
-    text-transform: uppercase;
-}
+} */
 
-.Register {
+/* .Register {
     color: red;
     width: 60px; height: 30px;
     margin-right:10px;
@@ -86,8 +81,8 @@ header {
     font-family:'ITC Benguiat';
     text-transform: uppercase;
 
-}
-.CreatePosts {
+} */
+/* .CreatePosts {
     color: red;
     width: 60px; height: 30px;
     margin-right:10px;
@@ -111,4 +106,4 @@ header {
     font-family:'ITC Benguiat';
     text-transform: uppercase;
 
-}
+} */

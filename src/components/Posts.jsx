@@ -33,7 +33,9 @@ const Posts = (props) => {
       <div className="SearchBar">
         <p className="titleText">Search Posts: </p>
         <span className="Search">
-        
+          <span id= "magnifyingGlass" class="material-symbols-outlined">
+          search
+        </span>
           <input
             type="text"
             className="searchBar"
@@ -54,7 +56,7 @@ const Posts = (props) => {
                 <img class="mfIcon" src="mf.png" alt="mf icon"/>
                 {post.title}
               </div>
-              <hr/>
+              {/* <hr/> */}
               <div>{post.description}</div>
               <div>
                 <b>Price: </b>
