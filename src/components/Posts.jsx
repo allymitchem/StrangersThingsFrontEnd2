@@ -33,6 +33,7 @@ const Posts = (props) => {
       <div className="SearchBar">
         <p className="titleText">Search Posts: </p>
         <span className="Search">
+        
           <input
             type="text"
             className="searchBar"
@@ -44,12 +45,16 @@ const Posts = (props) => {
           />
         </span>
       </div>
-            <div class="postList">
+            <div className="postList">
       {posts.length ? (
         postsToDisplay.map((post) => {
           return (
             <div className="PostBox" key={`post-id-${post._id}`}>
-              <div className="postTitle">{post.title}</div>
+              <div className="postTitle">
+                <img class="mfIcon" src="mf.png" alt="mf icon"/>
+                {post.title}
+              </div>
+              <hr/>
               <div>{post.description}</div>
               <div>
                 <b>Price: </b>
@@ -71,13 +76,13 @@ const Posts = (props) => {
                 {post.author.username}
               </div>
               <Link to={`/posts/${post._id}`}>
-                <button>Post Details</button>
+                <button class="detailsButton">Post Details</button>
               </Link>
             </div>
           );
         })
       ) : (
-        <div> Loading your posts</div>
+        <div class="loadingPosts"> LOADING YOUR POSTS...</div>
       )}
       </div>
     </div>
