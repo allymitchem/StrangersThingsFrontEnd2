@@ -56,7 +56,12 @@ const PostDetails = (props,) => {
       {post ? (
         <>
           <div className="box">
-            <div>
+          <NavLink to={"/posts"}>
+              <button className="back"><span class="material-symbols-outlined">
+arrow_back
+</span></button>
+            </NavLink>
+            <div className="postTitle">
               <b>{post.title}</b>
             </div>
             <div>{post.description}</div>
@@ -72,9 +77,7 @@ const PostDetails = (props,) => {
               {post.willDeliver ? <b>Will Deliver</b> : <b>Will Not Deliver</b>}
             </div>
 
-            <NavLink to={"/posts"}>
-              <button>Go Back</button>
-            </NavLink>
+            
             {!post.isAuthor ? <MessageForm /> : null}
            
             <div>

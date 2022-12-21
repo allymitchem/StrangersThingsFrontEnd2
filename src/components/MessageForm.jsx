@@ -22,7 +22,7 @@ const MessageForm = () => {
     <div>
       <form onSubmit={handleMessage}>
         <label htmlFor="message">
-          <h4>Reply to seller: </h4>
+          <h4>Message seller: </h4>
         </label>
         <input
           type="text"
