@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { sendMessage } from "../api-adapter";
 import { useParams } from "react-router-dom";
+import "./MessageForm.css"
 
 const MessageForm = () => {
   const [message, setMessage] = useState("");
@@ -24,6 +25,7 @@ const MessageForm = () => {
         <label htmlFor="message">
           <h4>Message seller: </h4>
         </label>
+        <span className="formButton">
         <input
           type="text"
           value={message}
@@ -31,8 +33,8 @@ const MessageForm = () => {
             setMessage(event.target.value);
           }}
         />
-        <input type="submit" value="Send" style={{ cursor: "pointer" }} />
-        <br></br>
+        <input className="sendButton" type="submit" value="SEND" style={{ cursor: "pointer" }} />
+        </span>
       </form>
     </div>
   );
