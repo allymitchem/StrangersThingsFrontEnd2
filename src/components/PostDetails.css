@@ -6,13 +6,22 @@
     border-radius:10px;
 }
 
+.EditForm input {
+    font-size:12pt;
+    margin-bottom: 10px;
+}
+
 .editTitle{
     margin-bottom:2px;
-    display:flex;
-   margin-left: 148px;
+    /* display:flex; */
+   /* margin-left: 148px; */
    font-family: 'ITC Benguiat';
+   color:red;
+   font-size:20pt;
 
 }
+
+
 .back {
     margin-bottom:10px;
     border-radius: 5px;
@@ -34,8 +43,33 @@
     padding:10px;
     width:70%;
     font-size:16pt;
+    align-self: center;
 }   
 
 .deleteButton {
     margin-top: 10px;
+    width:100px;
+    font-family: 'ITC Benguiat';
+    font-size: 12pt;
+    
 }
+
+.deleteButton:hover {
+    background-color: black;
+    color:red;
+    cursor: pointer;
+}
+
+.editButton {
+   width:100px;
+   margin-top:10px;
+   font-family: 'ITC Benguiat';
+   font-size:12pt;
+}
+
+.editButton:hover {
+    background-color: black;
+    color:red;
+    cursor: pointer;
+}
+

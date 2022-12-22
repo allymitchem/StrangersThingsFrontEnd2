@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { registerUser } from "../api-adapter";
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate, NavLink } from "react-router-dom";
+import "./Register.css"
 const Register = (props) => {
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
@@ -19,7 +19,7 @@ const Register = (props) => {
 
   return (
     <div
-      className="box"
+      className="formBox"
       style={{
         textAlign: "center",
         color: "red",
@@ -28,14 +28,18 @@ const Register = (props) => {
         fontFamily: "ITC Benguiat",
       }}
     >
-      <form onSubmit={handleSubmit}>
-        <h2>Complete your profile by filling in this account information</h2>
+      <form className= "registerForm" onSubmit={handleSubmit}>
+        <h2 className="signUp">SIGN UP</h2>
         <hr></hr>
-        <label htmlFor="username">Username: </label>
+        <label htmlFor="username"><span class="material-symbols-outlined">
+        person
+      </span>USERNAME: </label>
         <br></br>
         <input id="username" type="text" minLength="8" required />
         <br></br>
-        <label htmlFor="password">Password: </label>
+        <label htmlFor="password"><span class="material-symbols-outlined">
+        lock
+        </span>PASSWORD: </label>
         <br></br>
 
         <input id="password" type="password" minLength="8" />
@@ -46,6 +50,7 @@ const Register = (props) => {
           Submit{" "}
         </button>
       </form>
+        <NavLink className="loginLink" to="/login">Already have an account? Log In</NavLink>
     </div>
   );
 };

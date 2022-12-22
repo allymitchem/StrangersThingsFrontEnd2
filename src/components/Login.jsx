@@ -38,14 +38,19 @@ const Login = ({ isLoggedIn, setIsLoggedIn }) => {
           >
             LOG IN
           </h1>
+          <hr/>
           <label htmlFor="username" style={{ fontSize: "25px" }}>
-            USERNAME:{" "}
+          <span class="material-symbols-outlined">
+        person
+      </span>USERNAME:{" "}
           </label>
           <br></br>
           <input id="username" type="text" required />
           <br></br>
           <label htmlFor="password" style={{ fontSize: "25px" }}>
-            PASSWORD:{" "}
+          <span class="material-symbols-outlined">
+        lock
+        </span>PASSWORD:{" "}
           </label>
           <br></br>
           <input id="password" type="password" />

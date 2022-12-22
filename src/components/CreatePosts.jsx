@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { addPosts } from "../api-adapter";
-
+import "./CreatePosts.css"
 
 const CreatePosts = () => {
   const [title, setTitle] = useState("");
@@ -8,6 +9,7 @@ const CreatePosts = () => {
   const [price, setPrice] = useState("");
   const [userLocation, setUserLocation] = useState("");
   const [willDeliver, setWillDeliver] = useState(false);
+  const navigate = useNavigate()
   async function handleSubmit(event) {
     event.preventDefault();
     try {
@@ -20,14 +22,21 @@ const CreatePosts = () => {
         userLocation,
         willDeliver
       );
+
+      if (newPost){
+        navigate("/posts")
+      }
     } catch (error) {
       console.log(error);
     }
+    
   }
 
+  
+
   return (
-    <div style={{ textAlign: "center" }}>
-      <form onSubmit={handleSubmit}>
+    <div  style={{ textAlign: "center" }}>
+      <form className="newPostForm" onSubmit={handleSubmit}>
         <h4
           style={{ color: "red", fontSize: "35px", fontFamily: "ITC Benguiat" }}
         >
@@ -91,11 +100,11 @@ const CreatePosts = () => {
           }}
         />
         <br></br>
-        <input
+        <button
           style={{ cursor: "pointer" }}
           type="submit"
           value="Create New Post"
-        />
+        >Create Post</button>
       </form>
     </div>
   );

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams, useNavigate } from "react-router-dom";
 
 import { updatePosts, deletePost } from "../api-adapter";
 import MessageForm from "./MessageForm";
 import "./PostDetails.css";
 
 const PostDetails = (props) => {
+  const navigate = useNavigate()
   const { id } = useParams();
   const post = props.filterPosts(id)[0];
   console.log(post, "this is post")
@@ -40,6 +41,7 @@ const PostDetails = (props) => {
     const toDelete = event.target.id;
     const token = localStorage.getItem("token");
     const deleted = await deletePost(toDelete, token);
+    navigate("/posts")
   }
   async function handleSubmit(event) {
     event.preventDefault();
@@ -88,16 +90,17 @@ arrow_back
                   <div className="EditForm">
                     <label>Title: </label>
                     <input id="title" defaultValue={formDetails.title} />
-                    <label>Description: </label>
+                    <label >Description: </label>
                     <input
+                    className="editDescription"
                       id="description"
                       defaultValue={formDetails.description}
                     />
                     <label>Price: </label>
                     <input id="price" defaultValue={formDetails.price} />
-                    <label>Location</label>
+                    <label>Location:</label>
                     <input id="location" defaultValue={formDetails.location} />
-                    <button type="submit">Submit</button>
+                    <button className="editButton" type="submit">Submit</button>
                   </div>
                 </form>
               ) : null}
