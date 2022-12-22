@@ -16,7 +16,7 @@ header {
     text-transform: uppercase;
 }
 
-.Home, .Posts, .Login, .Register, .Logout, .CreatePosts, .Profile{
+.Home, .Posts, .Login, .Register, .CreatePosts, .Profile{
     
     color: red;
     font-size:20px;
@@ -29,6 +29,20 @@ header {
     text-decoration: none;
     font-family:'ITC Benguiat';
     text-transform: uppercase;
+}
+
+.Logout {
+    border:none;
+    color:red;
+    font-size:20px;
+    margin-right: 10px;
+    padding:5px;
+    background: linear-gradient(to bottom, black, rgba(111, 150, 157, 0.572));
+    border-radius: 5px;
+    text-decoration: none;
+    font-family:'ITC Benguiat';
+    text-transform: uppercase;
+
 }
 /* .Posts{
     

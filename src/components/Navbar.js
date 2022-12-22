@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
+  const navigate = useNavigate()
   return (
     <header>
       <h1 className="Title">Stranger's Things</h1>
@@ -13,15 +14,16 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         </NavLink>
 
         {isLoggedIn ? (
-          <NavLink
+          <button
             className="Logout"
             onClick={() => {
               localStorage.removeItem("token");
               setIsLoggedIn(false);
+              navigate('/posts')
             }}
           >
             Logout
-          </NavLink>
+          </button>
         ) : (
           <NavLink className="Login" to="login">
             Login
