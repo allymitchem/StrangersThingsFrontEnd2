@@ -5,10 +5,10 @@ import { updatePosts, deletePost } from "../api-adapter";
 import MessageForm from "./MessageForm";
 import "./PostDetails.css";
 
-const PostDetails = (props,) => {
+const PostDetails = (props) => {
   const { id } = useParams();
   const post = props.filterPosts(id)[0];
-
+  console.log(post, "this is post")
   const [formDetails, setFormDetails] = useState({
     title: "",
     description: "",

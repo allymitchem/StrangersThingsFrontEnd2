@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { redirect, NavLink, useNavigate, Navigate } from "react-router-dom";
 
 import { logInUser } from "../api-adapter";
+import "./Login.css"
 
 const Login = ({ isLoggedIn, setIsLoggedIn }) => {
   const navigate = useNavigate();
@@ -38,13 +39,13 @@ const Login = ({ isLoggedIn, setIsLoggedIn }) => {
             LOG IN
           </h1>
           <label htmlFor="username" style={{ fontSize: "25px" }}>
-            Username:{" "}
+            USERNAME:{" "}
           </label>
           <br></br>
           <input id="username" type="text" required />
           <br></br>
           <label htmlFor="password" style={{ fontSize: "25px" }}>
-            Password:{" "}
+            PASSWORD:{" "}
           </label>
           <br></br>
           <input id="password" type="password" />
@@ -55,7 +56,7 @@ const Login = ({ isLoggedIn, setIsLoggedIn }) => {
           </button>
           <br></br>
 
-          <NavLink to="/register">Don't have an account? Sign Up</NavLink>
+          <NavLink className="registerLink" to="/register">Don't have an account? Sign Up</NavLink>
         </form>
         {isLoggedIn ? navigate("/users/me") : null}
 
