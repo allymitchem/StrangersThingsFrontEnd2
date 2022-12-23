@@ -23,8 +23,9 @@ header {
     width: 60px; height: 30px;
     margin-right:10px;
     padding: 5px;
+    background-color: black;
     /* border: 1px solid rgb(243, 239, 239); */
-    background: linear-gradient(to bottom, black, rgba(111, 150, 157, 0.572));
+    /* background: linear-gradient(to bottom, black, rgba(111, 150, 157, 0.572)); */
     border-radius: 5px;
     text-decoration: none;
     font-family:'ITC Benguiat';
@@ -37,7 +38,8 @@ header {
     font-size:20px;
     margin-right: 10px;
     padding:5px;
-    background: linear-gradient(to bottom, black, rgba(111, 150, 157, 0.572));
+    background-color: black;
+    /* background: linear-gradient(to bottom, black, rgba(111, 150, 157, 0.572)); */
     border-radius: 5px;
     text-decoration: none;
     font-family:'ITC Benguiat';

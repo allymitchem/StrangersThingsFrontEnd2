@@ -3,8 +3,8 @@ import "./MyMessages.css";
 
 const MyMessages = ({ UserMessages }) => {
   return (
-    <div>
-      <h2 className="title">Messages</h2>
+    <div className="myMessagesPage">
+      
       {UserMessages.map((message, index) => {
         return (
           <div className="MessageDisplay" key={`message_${index}`}>

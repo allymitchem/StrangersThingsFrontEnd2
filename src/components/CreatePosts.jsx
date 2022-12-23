@@ -4,6 +4,7 @@ import { addPosts } from "../api-adapter";
 import "./CreatePosts.css"
 
 const CreatePosts = () => {
+  const [confirmationMessage, setConfirmationMessage] = useState("")
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -22,10 +23,9 @@ const CreatePosts = () => {
         userLocation,
         willDeliver
       );
-
-      if (newPost){
-        navigate("/posts")
-      }
+ if (newPost){
+  navigate("/posts")
+ }
     } catch (error) {
       console.log(error);
     }

@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 
 const MyPosts = ({ token, UserPosts }) => {
   return (
-  <div>
-    <h2 className="title">My Posts</h2>
+  <div className="myMessagesPage">
+ 
   {UserPosts.map((post) => {
+
     return (
       <div className="PostBox" key={`post-id-${post._id}`}>
         <div className="postTitle">{post.title}</div>
@@ -22,8 +23,8 @@ const MyPosts = ({ token, UserPosts }) => {
           {post.willDeliver ? <b>Will Deliver</b> : <b>Will Not Deliver</b>}
         </div>
 
-        <Link to={`/posts/${post._id}`}>
-          <button>Post Details</button>
+        <Link  to={`/posts/${post._id}`}>
+          <button className="detailsButton">Post Details</button>
         </Link>
       </div>
       

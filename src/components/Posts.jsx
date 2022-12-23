@@ -53,7 +53,7 @@ const Posts = (props) => {
           return (
             <div className="PostBox" key={`post-id-${post._id}`}>
               <div className="postTitle">
-                <img class="mfIcon" src="mf.png" alt="mf icon"/>
+                <img className="mfIcon" src="mf.png" alt="mf icon"/>
                 {post.title}
               </div>
               {/* <hr/> */}

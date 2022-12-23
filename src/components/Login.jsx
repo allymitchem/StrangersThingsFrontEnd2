@@ -40,7 +40,7 @@ const Login = ({ isLoggedIn, setIsLoggedIn }) => {
           </h1>
           <hr/>
           <label htmlFor="username" style={{ fontSize: "25px" }}>
-          <span class="material-symbols-outlined">
+          <span className="material-symbols-outlined">
         person
       </span>USERNAME:{" "}
           </label>
@@ -48,7 +48,7 @@ const Login = ({ isLoggedIn, setIsLoggedIn }) => {
           <input id="username" type="text" required />
           <br></br>
           <label htmlFor="password" style={{ fontSize: "25px" }}>
-          <span class="material-symbols-outlined">
+          <span className="material-symbols-outlined">
         lock
         </span>PASSWORD:{" "}
           </label>

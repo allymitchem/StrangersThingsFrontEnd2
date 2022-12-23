@@ -31,13 +31,13 @@ const Register = (props) => {
       <form className= "registerForm" onSubmit={handleSubmit}>
         <h2 className="signUp">SIGN UP</h2>
         <hr></hr>
-        <label htmlFor="username"><span class="material-symbols-outlined">
+        <label htmlFor="username"><span className="material-symbols-outlined">
         person
       </span>USERNAME: </label>
         <br></br>
         <input id="username" type="text" minLength="8" required />
         <br></br>
-        <label htmlFor="password"><span class="material-symbols-outlined">
+        <label htmlFor="password"><span className="material-symbols-outlined">
         lock
         </span>PASSWORD: </label>
         <br></br>

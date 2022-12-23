@@ -9,7 +9,7 @@ const PostDetails = (props) => {
   const navigate = useNavigate()
   const { id } = useParams();
   const post = props.filterPosts(id)[0];
-  console.log(post, "this is post")
+  
   const [formDetails, setFormDetails] = useState({
     title: "",
     description: "",
@@ -51,6 +51,7 @@ const PostDetails = (props) => {
       post._id,
       localStorage.getItem("token")
     );
+
   }
 
   return (
@@ -59,9 +60,9 @@ const PostDetails = (props) => {
         <>
           <div className="box">
           <NavLink to={"/posts"}>
-              <button className="back"><span class="material-symbols-outlined">
-arrow_back
-</span></button>
+              <button className="back"><span className="material-symbols-outlined">
+                arrow_back
+              </span></button>
             </NavLink>
             <div className="postTitle">
               <b>{post.title}</b>
@@ -119,7 +120,7 @@ arrow_back
           </div>
         </>
       ) : (
-        <div>Loading post details...</div>
+        <div className="loadingPosts">Loading post details...</div>
       )}
     </>
   );
