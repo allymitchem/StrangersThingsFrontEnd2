@@ -1,45 +1,27 @@
 .UserDisplay {
-    max-height: 100vh;
-    overflow-y: scroll;
-    padding:1rem;
-    width:70%;
-    align-self: center;
-    margin-top:2%;
-   
-   
-    /* display:grid;
-    grid-template-columns: 50% 50%; */
-
-
+  max-height: 100vh;
+  overflow-y: scroll;
+  padding: 1rem;
+  width: 70%;
+  align-self: center;
+  margin-top: 2%;
 }
 
 .tab {
-    color:#e9e9e9;
-   
-    
-    list-style: none;
-    display:inline;
-    margin-right:4px;
-    /* border-top-right-radius: 4px;
-    border-top-left-radius: 4px; */
-    font-family: "ITC Benguiat";
-    font-size: 20pt;
-   width:80%;
-    border:none;
-    cursor:pointer;
+  color: #e9e9e9;
+  list-style: none;
+  display: inline;
+  margin-right: 4px;
+  font-family: "ITC Benguiat";
+  font-size: 20pt;
+  width: 80%;
+  border: none;
+  cursor: pointer;
 }
 
 .tab:focus {
-    background: black;
-    color:red;
-    padding-right:5px;
-    padding-left:5px;
-  
-  
-    
+  background: black;
+  color: red;
+  padding-right: 5px;
+  padding-left: 5px;
 }
-
-/* .tabList{
-    margin-left:20%
-} */
-

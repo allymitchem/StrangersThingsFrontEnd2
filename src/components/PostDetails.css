@@ -1,75 +1,68 @@
 .EditForm {
-    display:flex;
-    flex-direction: column;
-    width: 400px;
-   
-    border-radius:10px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border-radius: 10px;
 }
 
 .EditForm input {
-    font-size:12pt;
-    margin-bottom: 10px;
+  font-size: 12pt;
+  margin-bottom: 10px;
 }
 
-.editTitle{
-    margin-bottom:2px;
-    /* display:flex; */
-   /* margin-left: 148px; */
-   font-family: 'ITC Benguiat';
-   color:red;
-   font-size:20pt;
-
+.editTitle {
+  margin-bottom: 2px;
+  font-family: "ITC Benguiat";
+  color: red;
+  font-size: 20pt;
 }
-
 
 .back {
-    margin-bottom:10px;
-    border-radius: 5px;
-    font-size:14pt;
-    padding-top: 5px;
-    background-color: #e9e9e9;
-    border:none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 14pt;
+  padding-top: 5px;
+  background-color: #e9e9e9;
+  border: none;
 }
 
-.back:hover{
-    background-color:black;
-    color:red;
-    cursor: pointer;
+.back:hover {
+  background-color: black;
+  color: red;
+  cursor: pointer;
 }
 .box {
-    margin:10px;
-    border-radius: 10px;
-    background-color:  rgba(111, 150, 157, 0.572);
-    padding:10px;
-    width:70%;
-    font-size:16pt;
-    align-self: center;
-}   
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(111, 150, 157, 0.572);
+  padding: 10px;
+  width: 70%;
+  font-size: 16pt;
+  align-self: center;
+}
 
 .deleteButton {
-    margin-top: 10px;
-    width:100px;
-    font-family: 'ITC Benguiat';
-    font-size: 12pt;
-    
+  margin-top: 10px;
+  width: 100px;
+  font-family: "ITC Benguiat";
+  font-size: 12pt;
 }
 
 .deleteButton:hover {
-    background-color: black;
-    color:red;
-    cursor: pointer;
+  background-color: black;
+  color: red;
+  cursor: pointer;
 }
 
 .editButton {
-   width:100px;
-   margin-top:10px;
-   font-family: 'ITC Benguiat';
-   font-size:12pt;
+  width: 100px;
+  margin-top: 10px;
+  font-family: "ITC Benguiat";
+  font-size: 12pt;
 }
 
 .editButton:hover {
-    background-color: black;
-    color:red;
-    cursor: pointer;
+  background-color: black;
+  color: red;
+  cursor: pointer;
 }
-

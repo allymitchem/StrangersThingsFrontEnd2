@@ -30,7 +30,6 @@ const Register = (props) => {
         textAlign: "center",
         color: "red",
         fontSize: "20px",
-
         fontFamily: "ITC Benguiat",
       }}
     >

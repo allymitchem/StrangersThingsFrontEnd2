@@ -1,129 +1,49 @@
 @import url(//db.onlinewebfonts.com/c/3f4943f4e662577a8113309f864540a4?family=ITC+Benguiat);
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    color: red;
-   padding-right:20px;
-   padding-left:20px;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: red;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .Title {
-    font-family:'ITC Benguiat';
-    text-transform: uppercase;
+  font-family: "ITC Benguiat";
+  text-transform: uppercase;
 }
 
-.Home, .Posts, .Login, .Register, .CreatePosts, .Profile{
-    
-    color: red;
-    font-size:20px;
-    width: 60px; height: 30px;
-    margin-right:10px;
-    padding: 5px;
-    background-color: black;
-    /* border: 1px solid rgb(243, 239, 239); */
-    /* background: linear-gradient(to bottom, black, rgba(111, 150, 157, 0.572)); */
-    border-radius: 5px;
-    text-decoration: none;
-    font-family:'ITC Benguiat';
-    text-transform: uppercase;
-}
-
-.Logout {
-    border:none;
-    color:red;
-    font-size:20px;
-    margin-right: 10px;
-    padding:5px;
-    background-color: black;
-    /* background: linear-gradient(to bottom, black, rgba(111, 150, 157, 0.572)); */
-    border-radius: 5px;
-    text-decoration: none;
-    font-family:'ITC Benguiat';
-    text-transform: uppercase;
-    cursor:pointer;
-
-}
-
-
-
-/* .Posts{
-    
-    color: red;
-    width: 60px; height: 30px;
-    margin-right:10px;
-    padding: 5px;
-    border: 1px solid rgb(243, 239, 239);
-    background-color: rgb(243, 239, 239);
-    border-radius: 5px;
-    text-decoration: none;
-    font-family:'ITC Benguiat';
-    text-transform: uppercase;
-} */
-/* .Login{
-    color: red;
-    width: 60px; height: 30px;
-    margin-right:10px;
-    padding: 5px;
-    border: 1px solid rgb(243, 239, 239);
-    background-color: rgb(243, 239, 239);
-    border-radius: 5px;
-    text-decoration: none;
-    font-family:'ITC Benguiat';
-    text-transform: uppercase;
-} */
-
-/* .Register {
-    color: red;
-    width: 60px; height: 30px;
-    margin-right:10px;
-    padding: 5px;
-    border: 1px solid rgb(243, 239, 239);
-    background-color: rgb(243, 239, 239);
-    border-radius: 5px;
-    text-decoration: none;
-    font-family:'ITC Benguiat';
-    text-transform: uppercase;
-}
-
-.Logout {
-    color: red;
-    width: 60px; height: 30px;
-    margin-right:10px;
-    padding: 5px;
-    border: 1px solid rgb(243, 239, 239);
-    background-color: rgb(243, 239, 239);
-    border-radius: 5px;
-    text-decoration: none;
-    font-family:'ITC Benguiat';
-    text-transform: uppercase;
-
-} */
-/* .CreatePosts {
-    color: red;
-    width: 60px; height: 30px;
-    margin-right:10px;
-    padding: 5px;
-    border: 1px solid rgb(243, 239, 239);
-    background-color: rgb(243, 239, 239);
-    border-radius: 5px;
-    text-decoration: none;
-    font-family:'ITC Benguiat';
-    text-transform: uppercase;
-}
+.Home,
+.Posts,
+.Login,
+.Register,
+.CreatePosts,
 .Profile {
-    color: red;
-    width: 60px; height: 30px;
-    margin-right:10px;
-    padding: 5px;
-    border: 1px solid rgb(243, 239, 239);
-    background-color: rgb(243, 239, 239);
-    border-radius: 5px;
-    text-decoration: none;
-    font-family:'ITC Benguiat';
-    text-transform: uppercase;
+  color: red;
+  font-size: 20px;
+  width: 60px;
+  height: 30px;
+  margin-right: 10px;
+  padding: 5px;
+  background-color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "ITC Benguiat";
+  text-transform: uppercase;
+}
 
-} */
+.Logout {
+  border: none;
+  color: red;
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 5px;
+  background-color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "ITC Benguiat";
+  text-transform: uppercase;
+  cursor: pointer;
+}

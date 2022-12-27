@@ -1,24 +1,23 @@
-
 .title {
-    margin:10px;
-    font-family: 'ITC Benguiat';
-    color: red;
-    display:flex;
+  margin: 10px;
+  font-family: "ITC Benguiat";
+  color: red;
+  display: flex;
   align-self: center;
 }
 
 .MessageDisplay {
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    background-color:  rgba(111, 150, 157, 0.572);
-    width:70%;
-    font-size: 18px;
-    align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(111, 150, 157, 0.572);
+  width: 70%;
+  font-size: 18px;
+  align-items: center;
 }
 
 .myMessagesPage {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { redirect, NavLink, useNavigate, Navigate } from "react-router-dom";
+import {  NavLink, useNavigate } from "react-router-dom";
 
 import { logInUser } from "../api-adapter";
 import "./Login.css"
