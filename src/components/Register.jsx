@@ -13,8 +13,14 @@ const Register = (props) => {
 
     const token = registeredUser.token;
 
+    if (token){
+      alert ("Thank you for signing up! Please log in")
+      
+    }
+    navigate("/login")
     localStorage.removeItem("token");
     localStorage.setItem("token", token);
+    
   }
 
   return (
